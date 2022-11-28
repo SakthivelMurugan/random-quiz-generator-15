@@ -703,7 +703,7 @@ function problem1511()
 		'question': "A batsman scored "+total+" runs which included "+boundaries+" boundaries and "+six+" sixes. What percent of his total score did he make by running between the wickets?",
 		'options': {
 			'A': percentage- parseInt(Math.random()*10),
-			'B': pupils+ parseInt(Math.random()*10),
+			'B': percentage+ parseInt(Math.random()*10),
 			'C': percentage,
 			'D': percentage- parseInt(Math.random()*10)
 		},
