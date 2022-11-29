@@ -1368,3 +1368,60 @@ question = {
 return question;
 
 }
+
+
+//24
+function problem1524(){
+	var inputData = [{
+		'distance':16,
+		'time1': 2,
+		'time2': 4,
+		},
+		{
+		'distance':18,
+		'time1': 3,
+		'time2': 4,
+		},
+		{
+		'distance':20,
+		'time1': 7,
+		'time2': 5,
+		},
+		{
+		'distance':14,
+		'time1': 5,
+		'time2': 7,
+		},
+		{
+        'distance':15,
+		'time1': 2,
+		'time2': 4,
+		}],
+	 randomIndex = getRandomNumber(inputData.length),
+		distance= inputData[randomIndex]['distance'],
+		time1 = inputData[randomIndex]['time1'],
+		time2 = inputData[randomIndex]['time2'],
+		manspeed,
+		question = {};
+
+	distance=parseInt(distance);
+	time1=parseInt(time1);
+	time2=parseInt(time2);
+	rate=(distance/time1*time2);
+
+	question = {
+		'type': 'single',
+		'id': '1524',
+		'question': 'The speed of a boat in still water in' +distance+ 'and the rate of current is' +time1+ 'The distance travelled downstream in' +time2+ 'is',
+		'options': {
+			 'A'	:1.2,
+             'B': 1.8,
+             'C' :2.4,
+             'D': rate,
+		},
+		'answer': 'D',
+		'author-id': '15'
+	}
+
+	return question;
+}
