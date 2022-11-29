@@ -1320,3 +1320,51 @@ question = {
 return question;
 
 }
+
+
+//23
+
+function problem1523(){
+    var inputData = [{
+    'manspeed': 10,
+    'bike': 1.5
+    },
+    {
+    'manspeed': 15,
+    'bike': 4.5
+    },
+    {
+    'manspeed': 8,
+    'bike': 3.5
+    },
+    {
+    'manspeed':5,
+    'bike': 2.5
+    }],
+    randomIndex = getRandomNumber(inputData.length),
+    manspeed= inputData[randomIndex]['manspeed'],
+    bike= inputData[randomIndex]['bike'],
+    a,
+    b,
+    question = {};
+    
+    a=manspeed-bike;
+    b=a-bike;
+
+question = {
+    'type': 'single',
+    'id': '1523',
+    'question': 'A man speed  is ' + manspeed + ' km/hr and the speed of the bike is ' + bike + ' km/hr. The mans speed against the bike is',
+    'options': {
+        'A': b - parseInt(Math.random()*10),
+        'B': b - parseInt(Math.random()*10),
+        'C': b + parseInt(Math.random()*10),
+        'D': b
+    },
+    'answer': 'D',
+    'author-id': '15'
+}
+
+return question;
+
+}
