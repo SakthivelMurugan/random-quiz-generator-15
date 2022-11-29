@@ -1213,3 +1213,52 @@ function problem1520()
 	return question;
 	
 }
+
+
+
+//21
+
+function problem1521(){
+	var inputData = [{
+		'electricity_bill':35,
+		'deducted': 150
+		},
+		{
+		'electricity_bill':50,
+		'deducted': 200
+		},
+		{
+		'electricity_bill':60,
+		'deducted': 180
+		},
+		{
+		'electricity_bill':90,
+		'deducted': 300
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		electricity_bill= inputData[randomIndex]['electricity_bill'],
+		deducted = inputData[randomIndex]['deducted'],
+		bill,
+		question = {};
+	
+	
+	to_pay=deducted-electricity_bill;
+	bill=(deducted/to_pay)*100;
+
+	question = {
+		'type': 'single',
+		'id': '1521',
+		'question': 'If' + electricity_bill + '% of an electricity bill is deducted then rs' + deducted + 'is still to be paid .How much was the original bill',
+		'options': {
+			'A': bill,
+			'B': bill + parseInt(Math.random()*10),
+			'C': bill + parseInt(Math.random()*10),
+			'D': bill - parseFloat(Math.random()*10)
+		},
+		'answer': 'A',
+		'author-id': '15'
+	}
+	
+	return question;
+	
+}
