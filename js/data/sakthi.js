@@ -1866,3 +1866,54 @@ function problem1532(){
 	return question;
 		
 }
+
+
+//33
+
+function problem1533(){
+	var inputData = [{
+		'len': 14,
+		'b': 18
+		},
+		{
+		'len': 23,
+		'b': 11
+		},
+		{
+		'len': 33,
+		'b': 21
+		},
+		{
+		'len': 25,
+		'b': 12
+		},
+		{
+		'len': 40,
+		'b': 13
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		len = inputData[randomIndex]['len'],
+		b = inputData[randomIndex]['b'],
+		a,
+		question = {};
+
+	len = parseInt (len);
+	b = parseInt (b);
+	a = len*b;
+
+	question = {
+		'type': 'single',
+		'id': '1533',
+		'question': 'Find the Area of Rectangle with length'+" "+ + len + 'cm and breadth' +" "+ b + 'cm ?',
+		'options': {
+			'A': a + parseInt(Math.random()*10),
+			'B': a - parseInt(Math.random()*10),
+			'C': a,
+			'D': a - parseInt(Math.random()*10)
+		},
+		'answer': 'C',
+		'author-id': '15'
+	}
+	
+	return question;	
+}
