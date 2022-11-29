@@ -1220,40 +1220,40 @@ function problem1520()
 
 function problem1521(){
 	var inputData = [{
-		'electricity_bill':35,
-		'deducted': 150
+		'electricity':45,
+		'deducted': 160
 		},
 		{
-		'electricity_bill':50,
-		'deducted': 200
+		'electricity':55,
+		'deducted': 210
 		},
 		{
-		'electricity_bill':60,
-		'deducted': 180
+		'electricity':65,
+		'deducted': 190
 		},
 		{
-		'electricity_bill':90,
-		'deducted': 300
+		'electricity':95,
+		'deducted': 290
 		}],
 		randomIndex = getRandomNumber(inputData.length),
-		electricity_bill= inputData[randomIndex]['electricity_bill'],
+		electricity= inputData[randomIndex]['electricity'],
 		deducted = inputData[randomIndex]['deducted'],
-		bill,
+		bil,
 		question = {};
 	
 	
-	to_pay=deducted-electricity_bill;
-	bill=(deducted/to_pay)*100;
+	to_pay=deducted-electricity;
+	bil=(deducted/to_pay)*100;
 
 	question = {
 		'type': 'single',
 		'id': '1521',
-		'question': 'If' + electricity_bill + '% of an electricity bill is deducted then rs' + deducted + 'is still to be paid .How much was the original bill',
+		'question': 'If' + electricity + '% of an electricity bill is deducted then rs' + deducted + 'is still to be paid .How much was the original bill',
 		'options': {
-			'A': bill,
-			'B': bill + parseInt(Math.random()*10),
-			'C': bill + parseInt(Math.random()*10),
-			'D': bill - parseFloat(Math.random()*10)
+			'A': bil,
+			'B': bil + parseInt(Math.random()*10),
+			'C': bil + parseInt(Math.random()*10),
+			'D': bil - parseFloat(Math.random()*10)
 		},
 		'answer': 'A',
 		'author-id': '15'
@@ -1268,50 +1268,50 @@ function problem1521(){
 
 function problem1522(){
     var inputData = [{
-    'over1': 10,
-    'rr': 3.2,
-    'over2': 40,
+    'overone': 14,
+    'runrate': 3.2,
+    'overtwo': 40,
     'runs': 252
     },
     {
-    'over1': 10,
-    'rr': 3.2,
-    'over2': 40,
-    'runs': 262
+    'overone': 10,
+    'runrate': 3.2,
+    'overtwo': 40,
+    'runs': 162
     },
     {
-    'over1': 10,
-    'rr': 3.2,
-    'over2': 40,
-    'runs': 292
+    'overone': 10,
+    'runrate': 3.2,
+    'overtwo': 40,
+    'runs': 320
     },
     {
-    'over1': 10,
-    'rr': 3.2,
-    'over2': 40,
-    'runs': 282
+    'overone': 10,
+    'runrate': 3.2,
+    'overtwo': 40,
+    'runs': 300
     }],
     randomIndex = getRandomNumber(inputData.length),
-    over1= inputData[randomIndex]['over1'],
-    over2= inputData[randomIndex]['over2'],
-    rr= inputData[randomIndex]['rr'],
+    overone= inputData[randomIndex]['over1'],
+    overtwo= inputData[randomIndex]['over2'],
+    runrate= inputData[randomIndex]['rr'],
     runs= inputData[randomIndex]['runs'],
     r,
-    runrate,
+    rr,
     question = {};
     
-    r=runs-(over1*rr);
-    runrate=r/over2;
+    r=runs-(overone*runrate);
+    rr=r/overtwo;
 
 question = {
     'type': 'single',
     'id': '1522',
-    'question': 'In the first ' + over1 + ' overs of a cricket game, the run rate was only ' + rr + '. What should be the run rate in the remaining ' + over2 + ' overs to reach the target of ' + runs + ' runs?',
+    'question': 'In the first ' + overone + ' overs of a cricket game, the run rate was only ' + runrate + '. What should be the run rate in the remaining ' + overtwo + ' overs to reach the target of ' + runs + ' runs?',
     'options': {
-        'A': runrate - parseInt(Math.random()*10),
-        'B': runrate - parseInt(Math.random()*10),
-        'C': runrate+ parseInt(Math.random()*10),
-        'D': runrate
+        'A': rr - parseInt(Math.random()*10),
+        'B': rr - parseInt(Math.random()*10),
+        'C': rr+ parseInt(Math.random()*10),
+        'D': rr
     },
     'answer': 'D',
     'author-id': '15'
@@ -1326,40 +1326,40 @@ return question;
 
 function problem1523(){
     var inputData = [{
-    'manspeed': 10,
+    'mspeed': 10,
     'bike': 1.5
     },
     {
-    'manspeed': 15,
+    'mspeed': 15,
     'bike': 4.5
     },
     {
-    'manspeed': 8,
+    'mspeed': 8,
     'bike': 3.5
     },
     {
-    'manspeed':5,
+    'mspeed':5,
     'bike': 2.5
     }],
     randomIndex = getRandomNumber(inputData.length),
-    manspeed= inputData[randomIndex]['manspeed'],
+    mspeed= inputData[randomIndex]['mspeed'],
     bike= inputData[randomIndex]['bike'],
-    a,
-    b,
+    a1,
+    b1,
     question = {};
     
-    a=manspeed-bike;
-    b=a-bike;
+    a1=mspeed-bike;
+    b1=a1-bike;
 
 question = {
     'type': 'single',
     'id': '1523',
-    'question': 'A man speed  is ' + manspeed + ' km/hr and the speed of the bike is ' + bike + ' km/hr. The mans speed against the bike is',
+    'question': 'A man speed  is ' + mspeed + ' km/hr and the speed of the bike is ' + bike + ' km/hr. The mans speed against the bike is',
     'options': {
-        'A': b - parseInt(Math.random()*10),
-        'B': b - parseInt(Math.random()*10),
-        'C': b + parseInt(Math.random()*10),
-        'D': b
+        'A': b1 - parseInt(Math.random()*10),
+        'B': b1 - parseInt(Math.random()*10),
+        'C': b1 + parseInt(Math.random()*10),
+        'D': b1
     },
     'answer': 'D',
     'author-id': '15'
@@ -1373,51 +1373,51 @@ return question;
 //24
 function problem1524(){
 	var inputData = [{
-		'distance':16,
-		'time1': 2,
-		'time2': 4,
+		'dis':18,
+		't1': 2,
+		't2': 4,
 		},
 		{
-		'distance':18,
-		'time1': 3,
-		'time2': 4,
+		'dis':28,
+		't1': 3,
+		't2': 4,
 		},
 		{
-		'distance':20,
-		'time1': 7,
-		'time2': 5,
+		'dis':15,
+		't1': 7,
+		't2': 5,
 		},
 		{
-		'distance':14,
-		'time1': 5,
-		'time2': 7,
+		'dis':24,
+		't1': 5,
+		't2': 7,
 		},
 		{
-        'distance':15,
-		'time1': 2,
-		'time2': 4,
+        'dis':17,
+		't1': 2,
+		't2': 3,
 		}],
 	 randomIndex = getRandomNumber(inputData.length),
-		distance= inputData[randomIndex]['distance'],
-		time1 = inputData[randomIndex]['time1'],
-		time2 = inputData[randomIndex]['time2'],
-		manspeed,
+		dis= inputData[randomIndex]['dis'],
+		t1 = inputData[randomIndex]['t1'],
+		t2 = inputData[randomIndex]['t2'],
+		mspeed,
 		question = {};
 
-	distance=parseInt(distance);
-	time1=parseInt(time1);
-	time2=parseInt(time2);
-	rate=(distance/time1*time2);
+	dis=parseInt(dis);
+	t1=parseInt(t1);
+	t2=parseInt(t2);
+	r=(dis/t1*t2);
 
 	question = {
 		'type': 'single',
 		'id': '1524',
-		'question': 'The speed of a boat in still water in' +distance+ 'and the rate of current is' +time1+ 'The distance travelled downstream in' +time2+ 'is',
+		'question': 'The speed of a boat in still water in' +dis+ 'and the rate of current is' +t1+ 'The distance travelled downstream in' +t2+ 'is',
 		'options': {
-			 'A'	:1.2,
-             'B': 1.8,
-             'C' :2.4,
-             'D': rate,
+			'A'	:r - parseInt(Math.random()*10),
+			'B': r - parseInt(Math.random()*10),
+			'C': r + parseInt(Math.random()*10),
+			'D': r
 		},
 		'answer': 'D',
 		'author-id': '15'
@@ -1431,44 +1431,44 @@ function problem1524(){
 
 function problem1525(){
 	var inputData = [{
-		'base':5,
-		'height':15,
+		'b':7,
+		'h':15,
 		},
 		{
-		'base':8,
-		'height':15,
+		'b':8,
+		'h':16,
 		},
 		{
-        'base':7,
-		'height':10,
+        'b':9,
+		'h':10,
 		},
 		{
-        'base':5,
-		'height':12,
+        'b':9,
+		'h':14,
 		},
 		{
-		'base':5,
-		'height':10,
+		'b':5,
+		'h':10,
 		}],
-	 randomIndex = getRandomNumber(inputData.length),
-		base= inputData[randomIndex]['base'],
-         height= inputData[randomIndex]['height'],
+		randomIndex = getRandomNumber(inputData.length),
+		b= inputData[randomIndex]['b'],
+        h= inputData[randomIndex]['h'],
 		area,
 		question = {};
 
-	base=parseInt(base);
-	height=parseInt(height);
-	area=(1/2*base*height),
+	b=parseInt(b);
+	h=parseInt(h);
+	area=(1/2*b*h),
 
 	question = {
 		'type': 'single',
 		'id': '1525',
-		'question': 'what is the area of a triangle with' +base+ 'and' +height+ 'meters',
+		'question': 'what is the area of a triangle with' +b+ 'and' +h+ 'meters',
 		'options': {
-			 'A':area,
-             'B': 40,
-             'C' :52,
-             'D': 25,
+			'A'	:area ,
+			'B': area - parseInt(Math.random()*10),
+			'C': area + parseInt(Math.random()*10),
+			'D': area- parseInt(Math.random()*10)
 		},
 		'answer': 'a',
 		'author-id': '15'
@@ -1481,47 +1481,46 @@ function problem1525(){
 
 function problem1526(){
 	var inputData = [{
-		'typist':80,
-		'pages': 1150,
-		'hours': 4
+		'type':70,
+		'page': 1050,
+		'hour': 5
 		},
 		{
-		'typist':50,
-		'pages': 400,
-		'hours': 5
+		'type':60,
+		'page': 300,
+		'hour': 5
 		},
 		{
-		'typist':70,
-		'pages': 750,
-		'hours': 2
+		'type':50,
+		'page': 650,
+		'hour': 3
 		},
 		{
-		'typist':10,
-		'pages': 600,
-		'hours': 8
+		'type':20,
+		'page': 500,
+		'hour': 15
 		}],
 		randomIndex = getRandomNumber(inputData.length),
-		typist= inputData[randomIndex]['typist'],
-		pages = inputData[randomIndex]['pages'],
-		hours = inputData[randomIndex]['hours'],
-		count,
-		total,
+		type= inputData[randomIndex]['type'],
+		page = inputData[randomIndex]['page'],
+		hour = inputData[randomIndex]['hour'],
+		c,
+		t,
 		question = {};
 	
 	
-	count=pages/typist;
-	total=count/hours;
+	c=page/type;
+	t=c/hour;
 
 	question = {
 		'type': 'single',
 		'id': '1526',
-		'question': + typist + 'typists can type' + pages + 'pages in' + hours + 
-					'hours.Find the average number of pages typed by each typist in an hour.',
+		'question': + type + 'typists can type' + page + 'pages in' + hour + 'hours.Find the average number of pages typed by each typist in an hour.',
 		'options': {
-			'A': total - parseInt(Math.random()*10),
-			'B': total - parseInt(Math.random()*10),
-			'C': total + parseInt(Math.random()*10),
-			'D': total
+			'A': t - parseInt(Math.random()*10),
+			'B': t - parseInt(Math.random()*10),
+			'C': t + parseInt(Math.random()*10),
+			'D': t
 		},
 		'answer': 'D',
 		'author-id': '15'
@@ -1536,70 +1535,80 @@ function problem1526(){
 
 function problem1527(){
 	var inputData = [{
-		'salaryA': 2000,
-		'salaryB': 6658,
-		'salaryC': 4590,
-		'salaryD': 2765,
-		'salaryE': 1890,
-		'average': 3579
+		'A': 1000,
+		'B': 5658,
+		'C': 4580,
+		'D': 2865,
+		'E': 2860,
+		'average': 2579,
+		't':4133,
+		's':3203
 		},
 		{
-		'salaryA': 6435,
-		'salaryB': 6927,
-		'salaryC': 6855,
-		'salaryD': 7230,
-		'salaryE': 6562,
-		'average': 6500
+		'A': 8435,
+		'B': 4927,
+		'C': 2855,
+		'D': 1230,
+		'E': 5562,
+		'average': 3500,
+		't':2233,
+		's':4250
 		},
 		{
-		'salaryA': 5439,
-		'salaryB': 3967,
-		'salaryC': 4865,
-		'salaryD': 1505,
-		'salaryE': 3689,
-		'average': 5432
+		'A': 9439,
+		'B': 3067,
+		'C': 4805,
+		'D': 1500,
+		'E': 3089,
+		'average': 5032,
+		't':4133,
+		's':3253
 		},
 		{
-		'salaryA': 9075,
-		'salaryB': 7634,
-		'salaryC': 5423,
-		'salaryD': 9809,
-		'salaryE': 4500,
-		'average': 5000
+		'A': 7075,
+		'B': 7334,
+		'C': 2423,
+		'D': 7809,
+		'E': 4580,
+		'average': 4000,
+		't':3233,
+		's':3153
 		},
 		{
-		'salaryA': 6543,
-		'salaryB': 6789,
-		'salaryC': 9087,
-		'salaryD': 6790,
-		'salaryE': 4326,
-		'average': 7000
+		'A': 3543,
+		'B': 6289,
+		'C': 9017,
+		'D': 6780,
+		'E': 4356,
+		'average': 7500,
+		't':4233,
+		's':3253
 		}],
 		randomIndex = getRandomNumber(inputData.length),
-		salaryA= inputData[randomIndex]['salaryA'],
-		salaryB= inputData[randomIndex]['salaryB'],
-		salaryC= inputData[randomIndex]['salaryC'],
-		salaryD= inputData[randomIndex]['salaryD'],
-		salaryE= inputData[randomIndex]['salaryE'],
+		A= inputData[randomIndex]['A'],
+		B= inputData[randomIndex]['B'],
+		C= inputData[randomIndex]['C'],
+		D= inputData[randomIndex]['D'],
+		E= inputData[randomIndex]['E'],
 		average= inputData[randomIndex]['average'],
-		total= inputData[randomIndex]['total'],
-		salary= inputData[randomIndex]['salary'],
-		finalSalary,
+		t= inputData[randomIndex]['t'],
+		s= inputData[randomIndex]['s'],
+		fS,
 		question = {};
 
-	var total = parseInt(salaryA+salaryB+salaryC+salaryD+salaryE),
-	    salary = parseInt(average*6),
-	    finalSalary = parseInt(salary - total);
+	var t = parseInt(A+B+C+D+E),
+	    s = parseInt(average*6),
+	    fS = parseInt(s - t);
 
 	question = {
 		'type': 'single',
 		'id': '1527',
-		'question': 'Mohan gets a salary of '+ salaryA +', '+salaryB+ ', '+salaryC+', '+salaryD+' and '+salaryE +' for 5 months.How much salary he must have in the sixth month so that he gets an average of '+ average +'',
+		'question': 'Mohan gets a salary of '+ A +', '+B+ ', '+C+', '+D+' and '+E +' for 5 months.How much salary he must have in the sixth month so that he gets an average of '+ average +'',
 		'options': {
-			'A': finalSalary,
-			'B': finalSalary - parseInt(Math.random()*10),
-			'C': finalSalary + parseInt(Math.random()*10),
-			'D': finalSalary - parseInt(Math.random()*10)
+			'A': fS,
+			'B': fS - parseInt(Math.random()*10),
+			'C': fS + parseInt(Math.random()*10),
+			'D': fS - parseInt(Math.random()*10)
 		},
 		'answer': 'A',
 		'author-id': '15'
@@ -1613,37 +1622,37 @@ function problem1527(){
 
 function problem1528(){
 	var inputData = [{
-		'perimeter': 56	
+		'peri': 50	
 		},
 		{
-		'perimeter': 78,
+		'peri': 75,
 		},
 		{
-		'perimeter': 29,	
+		'peri': 24,	
 		},
 		{
-		'perimeter': 41,		
+		'peri': 46,		
 		},
 		{
-		'perimeter': 49,	
+		'peri': 39,	
 		}],
 		randomIndex = getRandomNumber(inputData.length),
-		perimeter= inputData[randomIndex]['perimeter'],
-		side,
+		peri= inputData[randomIndex]['peri'],
+		s,
 		question = {};
 
-	perimeter=parseInt(perimeter);
-	side=perimeter/4;
+	peri=parseInt(peri);
+	s=peri/4;
 
 	question = {
 		'type': 'single',
 		'id': '1528',
-		'question': 'If the perimeter of square is ' + perimeter+', find one of the side of square?',
+		'question': 'If the perimeter of square is ' + peri+', find one of the side of square?',
 		'options': {
-			'A':side - parseInt(Math.random()*10),
-			'B': side - parseInt(Math.random()*10),
-			'C': side + parseInt(Math.random()*10),
-			'D':  side
+			'A': s - parseInt(Math.random()*10),
+			'B': s - parseInt(Math.random()*10),
+			'C': s + parseInt(Math.random()*10),
+			'D': s
 		},
 		'answer': 'D',
 		'author-id': '15'
@@ -1657,37 +1666,37 @@ function problem1528(){
 
 function problem1529(){
 	var inputData = [{
-		'value': 7836		
+		'v': 783		
 		},
 		{
-		'value': 7465,
+		'v': 465,
 		},
 		{
-		'value': 2340,	
+		'v': 240,	
 		},
 		{
-		'value': 5293,		
+		'v': 523,		
 		},
 		{
-		'value': 3343,	
+		'v': 343,	
 		}],
 		randomIndex = getRandomNumber(inputData.length),
-		value= inputData[randomIndex]['value'],
-		cubeRoot,
+		v= inputData[randomIndex]['v'],
+		cube,
 		question = {};
 
-	value=parseInt(value);
-	cubeRoot=Math.cbrt(value);
+	v=parseInt(v);
+	cube=Math.cbrt(v);
 
 	question = {
 		'type': 'single',
 		'id': '1529',
-		'question': 'Find the cube root value of '+ value+'? ',
+		'question': 'Find the cube root value of '+ v+'? ',
 		'options': {
-			'A':cubeRoot - parseInt(Math.random()*10),
-			'B': cubeRoot - parseInt(Math.random()*10),
-			'C': cubeRoot + parseInt(Math.random()*10),
-			'D':  cubeRoot
+			'A':cube - parseInt(Math.random()*10),
+			'B':cube - parseInt(Math.random()*10),
+			'C':cube + parseInt(Math.random()*10),
+			'D':cube
 		},
 		'answer': 'D',
 		'author-id': '15'
@@ -1702,49 +1711,100 @@ function problem1529(){
 
 function problem1530(){
     var inputData = [{
-        'milk': 40,
-        'litres':3
+        'm': 30,
+        'l':6
         },
         {
-        'milk': 44,
-            'litres':2
+        'm': 34,
+        'l':2
         },
         {
-        'milk': 12,
-            'litres':4
+        'm': 32,
+        'l':5
         },
         
         {
-        'milk': 80,
-        
-        'litres':12
+        'm': 30,
+        'l':22
         }],
         randomIndex = getRandomNumber(inputData.length),
-        milk= inputData[randomIndex]['sugar'],
-        litres= inputData[randomIndex]['litres'],
+        m= inputData[randomIndex]['m'],
+        l= inputData[randomIndex]['l'],
         
         
-        milk=parseInt(milk/100);
-        litres=parseInt(litres);
-        quality=milk*litres;
-        addedonelitres=litres+1;
-        percentage=(quality/addedonelitres)*100;
+        m=parseInt(m/100);
+        l=parseInt(l);
+        q=m*l;
+        added=l+1;
+        p=(q/added)*100;
         question = {};
         
         
     question = {
         'type': 'single',
         'id': '1530',
-        'question': 'To a milk solution of '+ litres+' containing '+milk+', one litre of water is added.the percentage of milk in the new solution is',
+        'question': 'To a milk solution of '+ l+' containing '+m+', one litre of water is added.the percentage of milk in the new solution is',
         'options': {
-            'A': percentage-parseInt(Math.random()*10),
-            'B': percentage-parseInt(Math.random()*10),
-            'C': percentage,
-            'D': percentage+parseInt(Math.random()*10)
+            'A': p-parseInt(Math.random()*10),
+            'B': p-parseInt(Math.random()*10),
+            'C': p,
+            'D': p+parseInt(Math.random()*10)
         },
         'answer': 'c',
         'author-id': '15'
     }
     return question;
 
+}
+
+
+//31
+
+function problem1531(){
+	var inputData = [{
+		'sSpeed': 21,
+		'bSpeed': 25
+		},
+		{
+		'sSpeed': 15,
+		'bSpeed': 6
+		},
+		{
+		'sSpeed': 10,
+		'bSpeed': 25
+		},
+		{
+		'sSpeed': 17,
+		'bSpeed': 21
+		},
+		{
+		'sSpeed': 30,
+		'bSpeed': 15
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		sSpeed = inputData[randomIndex]['sSpeed'],
+		bSpeed = inputData[randomIndex]['bSpeed'],
+		up,
+		question = {};
+
+	sSpeed = parseInt(sSpeed);
+	bSpeed = parseInt(bSpeed);
+	up = (bSpeed - sSpeed);
+
+	question = {
+		'type': 'single',
+		'id': '1531',
+		'question': 'The speed of boat in still water is' +" "+ + bSpeed + 'kmph. The speed of current is'+" "+ + sSpeed + 'kmph. What is its Up stream speed in kmph?',
+		'options': {
+			'A': up + parseInt(Math.random()*10),
+			'B': up - parseInt(Math.random()*10),
+			'C': up + parseInt(Math.random()*10),
+			'D': up
+		},
+		'answer': 'D',
+		'author-id': '15'
+	}
+	
+	return question;
+		
 }
