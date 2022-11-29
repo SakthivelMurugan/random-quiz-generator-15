@@ -1607,3 +1607,48 @@ function problem1527(){
 	
 	return question;
 }
+
+
+//28
+
+function problem1528(){
+	var inputData = [{
+		'perimeter': 56	
+		},
+		{
+		'perimeter': 78,
+		},
+		{
+		'perimeter': 29,	
+		},
+		{
+		'perimeter': 41,		
+		},
+		{
+		'perimeter': 49,	
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		perimeter= inputData[randomIndex]['perimeter'],
+		side,
+		question = {};
+
+	perimeter=parseInt(perimeter);
+	side=perimeter/4;
+
+	question = {
+		'type': 'single',
+		'id': '1528',
+		'question': 'If the perimeter of square is ' + perimeter+', find one of the side of square?',
+		'options': {
+			'A':side - parseInt(Math.random()*10),
+			'B': side - parseInt(Math.random()*10),
+			'C': side + parseInt(Math.random()*10),
+			'D':  side
+		},
+		'answer': 'D',
+		'author-id': '15'
+	}
+	
+	return question;
+	
+}
