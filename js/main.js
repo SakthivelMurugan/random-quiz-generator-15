@@ -58,5 +58,7 @@ questionBank.push(problem1527());
 
 questionBank.push(problem1528());
 
+questionBank.push(problem1529());
+
 
 console.log(questionBank);

@@ -1652,3 +1652,47 @@ function problem1528(){
 	return question;
 	
 }
+
+//29
+
+function problem1529(){
+	var inputData = [{
+		'value': 7836		
+		},
+		{
+		'value': 7465,
+		},
+		{
+		'value': 2340,	
+		},
+		{
+		'value': 5293,		
+		},
+		{
+		'value': 3343,	
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		value= inputData[randomIndex]['value'],
+		cubeRoot,
+		question = {};
+
+	value=parseInt(value);
+	cubeRoot=Math.cbrt(value);
+
+	question = {
+		'type': 'single',
+		'id': '1529',
+		'question': 'Find the cube root value of '+ value+'? ',
+		'options': {
+			'A':cubeRoot - parseInt(Math.random()*10),
+			'B': cubeRoot - parseInt(Math.random()*10),
+			'C': cubeRoot + parseInt(Math.random()*10),
+			'D':  cubeRoot
+		},
+		'answer': 'D',
+		'author-id': '15'
+	}
+	
+	return question;
+	
+}
