@@ -1808,3 +1808,61 @@ function problem1531(){
 	return question;
 		
 }
+
+//32
+
+function problem1532(){
+	var inputData = [{
+		'p': 2500,
+		'r': 6,
+		'years': 6
+		},
+		{
+		'p': 500,
+		'r': 5,
+		'years': 2
+		},
+		{
+		'p': 530,
+		'r': 4,
+		'years': 6
+		},
+		{
+		'p': 750,
+		'r': 8,
+		'years': 6
+		},
+		{
+		'p': 8000,
+		'r': 4,
+		'years': 6
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		p = inputData[randomIndex]['p'],
+		r = inputData[randomIndex]['r'],
+		years = inputData[randomIndex]['years'],
+		interest,
+		question = {};
+
+	p = parseInt(p);
+	r = parseInt(r);
+	years = parseInt(years);
+	interest = (p*interest*years)/100;
+
+	question = {
+		'type': 'single',
+		'id': '1532',
+		'question': 'Find the Simple Interest when Principal is' +" "+ p +" "+ ',Rate of Interest is' +" "+interest +'% per annum and Time is' +" "+ +years+ 'years.?',
+		'options': {
+			'A': interest + parseInt(Math.random()*10),
+			'B': interest + parseInt(Math.random()*10),
+			'C': interest,
+			'D': interest - parseInt(Math.random()*10)
+		},
+		'answer': 'C',
+		'author-id': '15'
+	}
+	
+	return question;
+		
+}
