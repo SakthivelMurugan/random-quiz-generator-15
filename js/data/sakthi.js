@@ -1696,3 +1696,55 @@ function problem1529(){
 	return question;
 	
 }
+
+
+//30
+
+function problem1530(){
+    var inputData = [{
+        'milk': 40,
+        'litres':3
+        },
+        {
+        'milk': 44,
+            'litres':2
+        },
+        {
+        'milk': 12,
+            'litres':4
+        },
+        
+        {
+        'milk': 80,
+        
+        'litres':12
+        }],
+        randomIndex = getRandomNumber(inputData.length),
+        milk= inputData[randomIndex]['sugar'],
+        litres= inputData[randomIndex]['litres'],
+        
+        
+        milk=parseInt(milk/100);
+        litres=parseInt(litres);
+        quality=milk*litres;
+        addedonelitres=litres+1;
+        percentage=(quality/addedonelitres)*100;
+        question = {};
+        
+        
+    question = {
+        'type': 'single',
+        'id': '1530',
+        'question': 'To a milk solution of '+ litres+' containing '+milk+', one litre of water is added.the percentage of milk in the new solution is',
+        'options': {
+            'A': percentage-parseInt(Math.random()*10),
+            'B': percentage-parseInt(Math.random()*10),
+            'C': percentage,
+            'D': percentage+parseInt(Math.random()*10)
+        },
+        'answer': 'c',
+        'author-id': '15'
+    }
+    return question;
+
+}
