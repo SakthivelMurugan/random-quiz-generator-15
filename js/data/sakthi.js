@@ -1917,3 +1917,104 @@ function problem1533(){
 	
 	return question;	
 }
+
+
+//34
+
+function problem1534(){
+	var inputData = [{
+		'sum': 580,
+		'total': 12
+		},
+		{
+		'sum': 425,
+		'total': 15
+		},
+		{
+		'sum': 880,
+		'total': 3
+		},
+		{
+		'sum': 24,
+		'total': 6
+		},
+		{
+		'sum': 40,
+		'total': 4
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		sum = inputData[randomIndex]['sum'],
+		total = inputData[randomIndex]['total'],
+		avg,
+		question = {};
+
+	sum = parseInt (sum);
+	total = parseInt (total);
+	avg = sum/total;
+
+	question = {
+		'type': 'single',
+		'id': '1534',
+		'question': ' The sum of' +" " + total + " " + 'numbers is' +" " + + sum +'. Find their average number.?',
+		'options': {
+			'A': avg + parseInt(Math.random()*10),
+			'B': avg - parseInt(Math.random()*10),
+			'C': avg - parseInt(Math.random()*10),
+			'D': avg 
+		},
+		'answer': 'D',
+		'author-id': '15'
+	}
+	
+	return question;	
+}
+
+//35
+
+function problem1535(){
+	var inputData = [{
+		'len': 14,
+		'b': 12
+		},
+		{
+		'len': 23,
+		'b': 10
+		},
+		{
+		'len': 33,
+		'b': 23
+		},
+		{
+		'len': 25,
+		'b': 11
+		},
+		{
+		'len': 30,
+		'b': 21
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		len = inputData[randomIndex]['len'],
+		b = inputData[randomIndex]['b'],
+		peri,
+		question = {};
+
+	len = parseInt(len);
+	b = parseInt(b);
+	peri = 2*(len+b);
+
+	question = {
+		'type': 'single',
+		'id': '1535',
+		'question': 'Find the Perimeter of the Rectangle with length'+" "+  len +'cm and breadth' +" "+ b + 'cm ?',
+		'options': {
+			'A': peri + parseInt(Math.random()*10),
+			'B': peri - parseInt(Math.random()*10),
+			'C': peri,
+			'D': peri - parseInt(Math.random()*10)
+		},
+		'answer': 'C',
+		'author-id': '15'
+	}
+	
+	return question;	
+}
