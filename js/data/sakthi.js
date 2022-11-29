@@ -1262,3 +1262,61 @@ function problem1521(){
 	return question;
 	
 }
+
+
+//22
+
+function problem1522(){
+    var inputData = [{
+    'over1': 10,
+    'rr': 3.2,
+    'over2': 40,
+    'runs': 252
+    },
+    {
+    'over1': 10,
+    'rr': 3.2,
+    'over2': 40,
+    'runs': 262
+    },
+    {
+    'over1': 10,
+    'rr': 3.2,
+    'over2': 40,
+    'runs': 292
+    },
+    {
+    'over1': 10,
+    'rr': 3.2,
+    'over2': 40,
+    'runs': 282
+    }],
+    randomIndex = getRandomNumber(inputData.length),
+    over1= inputData[randomIndex]['over1'],
+    over2= inputData[randomIndex]['over2'],
+    rr= inputData[randomIndex]['rr'],
+    runs= inputData[randomIndex]['runs'],
+    r,
+    runrate,
+    question = {};
+    
+    r=runs-(over1*rr);
+    runrate=r/over2;
+
+question = {
+    'type': 'single',
+    'id': '1522',
+    'question': 'In the first ' + over1 + ' overs of a cricket game, the run rate was only ' + rr + '. What should be the run rate in the remaining ' + over2 + ' overs to reach the target of ' + runs + ' runs?',
+    'options': {
+        'A': runrate - parseInt(Math.random()*10),
+        'B': runrate - parseInt(Math.random()*10),
+        'C': runrate+ parseInt(Math.random()*10),
+        'D': runrate
+    },
+    'answer': 'D',
+    'author-id': '15'
+}
+
+return question;
+
+}
