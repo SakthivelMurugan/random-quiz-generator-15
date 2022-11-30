@@ -2020,7 +2020,6 @@ function problem1535(){
 }
 
 //36
-//36
 
 function problem1536()
 {
@@ -2081,6 +2080,70 @@ function problem1536()
 			'D': probableweight - parseInt(Math.random()*10)
 		},
 		'answer': 'A',
+		'author-id': '15'
+	}
+	
+	return question;
+	
+}
+
+//37
+
+
+function problem1537()
+{
+	var inputData = [{
+		'p1': 20,
+		'a1': 50.25,
+		'p2': 15,
+		'a2': 45.15
+		},
+		{
+		'p1': 17,
+		'a1': 55.25,
+		'p2': 9,
+		'a2': 56.15
+		},
+		{
+		'p1': 19,
+		'a1': 52.25,
+		'p2': 8,
+		'a2': 44.15
+		},
+		{
+		'p1': 10,
+		'a1': 52.5,
+		'p2': 6,
+		'a2': 23.33
+		},
+		{
+		'p1': 15,
+		'a1': 55.3,
+		'p2': 13,
+		'a2': 44.35
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		p1= inputData[randomIndex]['p1'],
+		a1= inputData[randomIndex]['a1'],
+		p2= inputData[randomIndex]['p2'],
+		a2= inputData[randomIndex]['a2'],
+		avg,
+		question = {};
+
+	avg=(p1*a1+p2*a2)/(p1+p2);
+	avg=parseFloat(avg);
+
+	question = {
+		'type': 'single',
+		'id': '1537',
+		'question': "The average weight of"+p1+"boys in a class is"+a1+"kg and that of the remaining"+p2+"boys is"+a2+"kg. Find the average weights of all the boys in the class.",
+		'options': {
+			'A': avg - parseInt(Math.random()*10),
+			'B': avg,
+			'C': avg + parseInt(Math.random()*10),
+			'D': avg - parseInt(Math.random()*10)
+		},
+		'answer': 'B',
 		'author-id': '15'
 	}
 	
