@@ -2210,7 +2210,7 @@ function problem1538()
 
 	question = {
 		'type': 'single',
-		'id': '1509',
+		'id': '1538',
 		'question': "If the average marks of three groups of "+s1+", "+s2+" and "+s3+" students respectively is "+m1+", "+m2+", "+m3+", then the average marks of all the students is:",
 		'options': {
 			'A': a,
@@ -2269,6 +2269,56 @@ function problem1539()
 			'D': pp+ parseInt(Math.random()*10)
 		},
 		'answer': 'B',
+		'author-id': '15'
+	}
+	
+	return question;
+	
+}
+
+//40
+
+function problem1540()
+{
+	var inputData = [{
+		'p': 1401,
+		'pp': 25
+		},
+		{
+		'p': 1502,
+		'pp': 27
+		},
+		{
+		'p': 1603,
+		'pp': 29
+		},
+		{
+		'p': 1804,
+		'pp': 30
+		},
+		{
+		'p': 1005,
+		'pp': 20
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		p= inputData[randomIndex]['p'],
+		pp= inputData[randomIndex]['pp'],
+		sp=parseFloat(),
+		question = {};
+
+	sp=(p*pp/100)+p;
+
+	question = {
+		'type': 'single',
+		'id': '1540',
+		'question': "siva purchase a cycle for Rs. "+p+" and sold it to her brother. If siva earned a profit of "+pp+"%, find the selling price of cycle.",
+		'options': {
+			'A': sp- parseInt(Math.random()*10),
+			'B': sp- parseInt(Math.random()*10),
+			'C': sp+ parseInt(Math.random()*10),
+			'D': sp
+		},
+		'answer': 'D',
 		'author-id': '15'
 	}
 	
