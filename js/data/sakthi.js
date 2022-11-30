@@ -2225,3 +2225,53 @@ function problem1538()
 	return question;
 	
 }
+
+//39
+
+function problem1539()
+{
+	var inputData = [{
+		's': 2200,
+		'c': 2000
+		},
+		{
+		's': 3000,
+		'c': 2300
+		},
+		{
+		's': 2100,
+		'c': 1300
+		},
+		{
+		's': 3000,
+		'c': 2000
+		},
+		{
+		's': 4000,
+		'c': 3000
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		s= inputData[randomIndex]['s'],
+		c= inputData[randomIndex]['c'],
+		pp=parseFloat(),
+		question = {};
+
+	pp=(s-c)*100/c;
+
+	question = {
+		'type': 'single',
+		'id': '1539',
+		'question': "A shopkeeper sold an books for Rs. "+s+". If the cost price of the books is "+c+", find the profit percent.",
+		'options': {
+			'A': pp- parseInt(Math.random()*10),
+			'B': pp,
+			'C': pp- parseInt(Math.random()*10),
+			'D': pp+ parseInt(Math.random()*10)
+		},
+		'answer': 'B',
+		'author-id': '15'
+	}
+	
+	return question;
+	
+}
