@@ -2018,3 +2018,72 @@ function problem1535(){
 	
 	return question;	
 }
+
+//36
+//36
+
+function problem1536()
+{
+	var inputData = [{
+		'jaimin': 65,
+		'jaimax': 72,
+		'bromin': 60,
+		'bromax': 70,
+		'dad': 68
+		},
+		{
+		'jaimin': 60,
+		'jaimax': 70,
+		'bromin': 44,
+		'bromax': 55,
+		'dad': 65
+		},
+		{
+		'jaimin': 70,
+		'jaimax': 73,
+		'bromin': 40,
+		'bromax': 60,
+		'dad': 67
+		},
+		{
+		'jaimin': 55,
+		'jaimax': 65,
+		'bromin': 44,
+		'bromax': 60,
+		'dad': 57
+		},
+		{
+		'jaimin': 50,
+		'jaimax': 60,
+		'bromin': 48,
+		'bromax': 58,
+		'dad': 54
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		jaimin= inputData[randomIndex]['jaimin'],
+		jaimax= inputData[randomIndex]['jaimax'],
+		bromin= inputData[randomIndex]['bromin'],
+		bromax= inputData[randomIndex]['bromax'],
+		dad=inputData[randomIndex]['dad'],
+		probableweight,
+		question = {};
+
+	probableweight=(jaimin+jaimax+bromin+bromax+dad)/5;
+
+	question = {
+		'type': 'single',
+		'id': '1536',
+		'question': "In jai's opinion, his weight is greater than"+jaimin+"kg but less than"+jaimax+"kg. His brother doest not agree with Arun and he thinks that Arun's weight is greater than"+bromin+"kg but less than"+bromax+"kg. His mother's view is that his weight cannot be greater than"+dad+"kg. If all are them are correct in their estimation, what is the average of different probable weights of Arun?",
+		'options': {
+			'A': probableweight,
+			'B': probableweight - parseInt(Math.random()*10),
+			'C': probableweight + parseInt(Math.random()*10),
+			'D': probableweight - parseInt(Math.random()*10)
+		},
+		'answer': 'A',
+		'author-id': '15'
+	}
+	
+	return question;
+	
+}
