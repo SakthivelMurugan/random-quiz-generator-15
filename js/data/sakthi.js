@@ -2136,7 +2136,7 @@ function problem1537()
 	question = {
 		'type': 'single',
 		'id': '1537',
-		'question': "The average weight of"+p1+"boys in a class is"+a1+"kg and that of the remaining"+p2+"boys is"+a2+"kg. Find the average weights of all the boys in the class.",
+		'question': "The average weight of"+p1+"girls in a class is"+a1+"kg and that of the remaining"+p2+"girls is"+a2+"kg. Find the average weights of all the girls in the class.",
 		'options': {
 			'A': avg - parseInt(Math.random()*10),
 			'B': avg,
@@ -2144,6 +2144,81 @@ function problem1537()
 			'D': avg - parseInt(Math.random()*10)
 		},
 		'answer': 'B',
+		'author-id': '15'
+	}
+	
+	return question;
+	
+}
+
+//38
+
+function problem1538()
+{
+	var inputData = [{
+		's1': 45,
+		's2': 50,
+		's3': 35,
+		'm1': 40,
+		'm2': 45,
+		'm3': 50
+		},
+		{
+		's1': 46,
+		's2': 52,
+		's3': 37,
+		'm1': 42,
+		'm2': 44,
+		'm3': 59
+		},
+		{
+		's1': 44,
+		's2': 56,
+		's3': 32,
+		'm1': 41,
+		'm2': 42,
+		'm3': 59
+		},
+		{
+		's1': 45,
+		's2': 50,
+		's3': 35,
+		'm1': 40,
+		'm2': 45,
+		'm3': 50
+		},
+		{
+		's1': 55,
+		's2': 60,
+		's3': 45,
+		'm1': 30,
+		'm2': 35,
+		'm3': 40
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		s1= inputData[randomIndex]['s1'],
+		s2= inputData[randomIndex]['s2'],
+		s3= inputData[randomIndex]['s3'],
+		m1= inputData[randomIndex]['m1'],
+		m2= inputData[randomIndex]['m2'],
+		m3= inputData[randomIndex]['m3'],
+		a,
+		question = {};
+
+	a=(s1*m1+s2*m2+s3*m3)/(s1+s2+s3);
+	a=parseFloat(a);
+
+	question = {
+		'type': 'single',
+		'id': '1509',
+		'question': "If the average marks of three groups of "+s1+", "+s2+" and "+s3+" students respectively is "+m1+", "+m2+", "+m3+", then the average marks of all the students is:",
+		'options': {
+			'A': a,
+			'B': a- parseInt(Math.random()*10),
+			'C': a+ parseInt(Math.random()*10),
+			'D': a- parseInt(Math.random()*10)
+		},
+		'answer': 'A',
 		'author-id': '15'
 	}
 	
